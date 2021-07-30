@@ -10,4 +10,4 @@ WORKINGDIR=NEEDS-A-DIFFERENT-ABSOLUTE-FILE-PATH
 
 cd $PRISTINEDIR
 git pull
-cp -r -n $PRISTINEDIR $WORKINGDIR
+rsync -r --ignore-existing --exclude '.git' $PRISTINEDIR $WORKINGDIR
